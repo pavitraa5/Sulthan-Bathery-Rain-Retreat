@@ -215,7 +215,7 @@ function Intro() {
             src={pets.url}
             alt="Pet-friendly resort near Sulthan Bathery – dogs by the pool"
             loading="lazy"
-            className="mt-12 aspect-[3/4] w-full object-cover shadow-soft"
+            className="mt-12 aspect-[3/4] w-full object-cover object-[70%_center] shadow-soft"
           />
         </div>
       </div>

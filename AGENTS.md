@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Each SEO landing page is its own route file under src/routes named by its URL slug; `/` redirects to the main landing page — keeps share/SEO metadata per page.
+- Shared Raindrops chrome (header, footer, floating contact) lives in src/components/raindrops and contact links in src/lib/raindrops.ts — so new landing pages reuse one source of contact/booking URLs.
+- Resort photos are stored as asset pointers in src/assets/raindrops — avoids committing binaries.
