@@ -205,17 +205,25 @@ function Intro() {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-5">
+          <div className="space-y-5">
+            <img
+              src={cottageNight.url}
+              alt="Raindrops Resorts cottage glowing at night inside the coffee plantation"
+              loading="lazy"
+              className="aspect-[4/5] w-full object-cover shadow-soft"
+            />
+            <img
+              src={plantationWalk.url}
+              alt="Guests walking through the coffee plantation at Raindrops Resorts"
+              loading="lazy"
+              className="aspect-square w-full object-cover shadow-soft"
+            />
+          </div>
           <img
             src={couple.url}
             alt="Guest relaxing on a cottage veranda at Raindrops Resorts"
             loading="lazy"
-            className="aspect-[3/4] w-full object-cover shadow-soft"
-          />
-          <img
-            src={pets.url}
-            alt="Pet-friendly resort near Sulthan Bathery – dogs by the pool"
-            loading="lazy"
-            className="mt-12 aspect-[3/4] w-full object-cover object-[70%_center] shadow-soft"
+            className="mt-12 aspect-[3/4] w-full object-cover shadow-soft"
           />
         </div>
       </div>
