@@ -4,7 +4,7 @@ import { ArrowRight, Binoculars, Coffee, Heart, PawPrint, Sun, Trees, Users, Whe
 
 import heroAerial from "@/assets/raindrops/hero-aerial.jpg.asset.json";
 import couple from "@/assets/raindrops/couple-veranda.jpg.asset.json";
-import pets from "@/assets/raindrops/pets.jpg.asset.json";
+import plantationWalk from "@/assets/raindrops/plantation-walk.jpg.asset.json";
 import ghat from "@/assets/raindrops/wayanad-ghat.jpg.asset.json";
 import cottageForest from "@/assets/raindrops/cottage-forest.jpg.asset.json";
 import plantationCottage from "@/assets/raindrops/plantation-cottage.jpg.asset.json";
