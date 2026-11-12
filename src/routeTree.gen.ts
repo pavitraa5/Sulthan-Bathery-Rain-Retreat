@@ -10,33 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ResortsInSulthanBatheryRouteImport } from './routes/resorts-in-sulthan-bathery'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ResortsInSulthanBatheryRoute = ResortsInSulthanBatheryRouteImport.update({
+  id: '/resorts-in-sulthan-bathery',
+  path: '/resorts-in-sulthan-bathery',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/resorts-in-sulthan-bathery': typeof ResortsInSulthanBatheryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/resorts-in-sulthan-bathery': typeof ResortsInSulthanBatheryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/resorts-in-sulthan-bathery': typeof ResortsInSulthanBatheryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/resorts-in-sulthan-bathery'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/resorts-in-sulthan-bathery'
+  id: '__root__' | '/' | '/resorts-in-sulthan-bathery'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ResortsInSulthanBatheryRoute: typeof ResortsInSulthanBatheryRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +58,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/resorts-in-sulthan-bathery': {
+      id: '/resorts-in-sulthan-bathery'
+      path: '/resorts-in-sulthan-bathery'
+      fullPath: '/resorts-in-sulthan-bathery'
+      preLoaderRoute: typeof ResortsInSulthanBatheryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ResortsInSulthanBatheryRoute: ResortsInSulthanBatheryRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
