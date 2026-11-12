@@ -348,7 +348,7 @@ function Accommodation() {
           {stays.map((s, i) => (
             <a
               key={s.sub}
-              href={cottageLinks[i].href}
+              href={cottageLinks[i]?.href}
               className="group relative block aspect-[4/3] overflow-hidden"
             >
               <img
