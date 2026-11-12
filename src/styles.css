@@ -30,6 +30,19 @@
  */
 
 @theme inline {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Lato", system-ui, sans-serif;
+  --font-script: "Sacramento", cursive;
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+  --color-olive: var(--olive);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-foreground: var(--whatsapp-foreground);
+  --color-enquiry: var(--enquiry);
+  --color-enquiry-foreground: var(--enquiry-foreground);
+  --color-brand-deep: var(--brand-deep);
+  --color-footer-foreground: var(--footer-foreground);
+  --shadow-soft: var(--shadow-soft);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -73,74 +86,54 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0rem;
+  /* Raindrops brand: plantation brown, cream, sand */
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.36 0.02 75);
+  --card: oklch(0.886 0.024 79.7);
+  --card-foreground: oklch(0.36 0.02 75);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.36 0.02 75);
+  --primary: oklch(0.449 0.052 80.4);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.962 0.024 79.7);
+  --secondary-foreground: oklch(0.449 0.052 80.4);
+  --muted: oklch(0.962 0.024 79.7);
+  --muted-foreground: oklch(0.45 0.02 75);
+  --accent: oklch(0.886 0.024 79.7);
+  --accent-foreground: oklch(0.449 0.052 80.4);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.822 0.045 78.4);
+  --input: oklch(0.822 0.045 78.4);
+  --ring: oklch(0.449 0.052 80.4);
+
+  --cream: oklch(0.962 0.024 79.7);
+  --sand: oklch(0.886 0.024 79.7);
+  --olive: oklch(0.478 0.061 123.7);
+  --whatsapp: oklch(0.668 0.167 144.4);
+  --whatsapp-foreground: oklch(1 0 0);
+  --enquiry: oklch(0.657 0.137 72);
+  --enquiry-foreground: oklch(1 0 0);
+  --brand-deep: oklch(0.365 0.041 79.3);
+  --footer-foreground: oklch(0.87 0.03 80);
+  --hero-overlay: linear-gradient(180deg, oklch(0.15 0.02 80 / 0.55) 0%, oklch(0.15 0.02 80 / 0.2) 40%, oklch(0.15 0.02 80 / 0.6) 100%);
+  --image-fade: linear-gradient(180deg, transparent 35%, oklch(0.15 0.02 80 / 0.75) 100%);
+  --shadow-soft: 0 18px 40px -20px oklch(0.365 0.041 79.3 / 0.45);
+
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
-}
-
-.dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+  --sidebar: oklch(0.962 0.024 79.7);
+  --sidebar-foreground: oklch(0.36 0.02 75);
+  --sidebar-primary: oklch(0.449 0.052 80.4);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.886 0.024 79.7);
+  --sidebar-accent-foreground: oklch(0.449 0.052 80.4);
+  --sidebar-border: oklch(0.822 0.045 78.4);
+  --sidebar-ring: oklch(0.449 0.052 80.4);
 }
 
 @layer base {
@@ -151,5 +144,60 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
   }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+  }
+}
+
+@utility bg-hero-overlay {
+  background-image: var(--hero-overlay);
+}
+
+@utility bg-image-fade {
+  background-image: var(--image-fade);
+}
+
+/* Small uppercase label with brown rule beneath, as on raindropsresorts.com */
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--foreground);
+}
+
+@utility rule {
+  display: block;
+  width: 2rem;
+  height: 3px;
+  background-color: var(--primary);
+}
+
+@utility heading-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  color: var(--primary);
+}
+
+@utility prose-body {
+  font-size: 0.975rem;
+  line-height: 1.75;
+  color: var(--muted-foreground);
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@utility animate-rise {
+  animation: rise-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
