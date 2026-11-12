@@ -4,7 +4,7 @@ import { ArrowRight, Binoculars, Coffee, Heart, PawPrint, Sun, Trees, Users, Whe
 
 import heroAerial from "@/assets/raindrops/hero-aerial.jpg.asset.json";
 import couple from "@/assets/raindrops/couple-veranda.jpg.asset.json";
-import pets from "@/assets/raindrops/pets.jpg.asset.json";
+import plantationWalk from "@/assets/raindrops/plantation-walk.jpg.asset.json";
 import ghat from "@/assets/raindrops/wayanad-ghat.jpg.asset.json";
 import cottageForest from "@/assets/raindrops/cottage-forest.jpg.asset.json";
 import plantationCottage from "@/assets/raindrops/plantation-cottage.jpg.asset.json";
@@ -205,17 +205,25 @@ function Intro() {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-5">
+          <div className="space-y-5">
+            <img
+              src={cottageNight.url}
+              alt="Raindrops Resorts cottage glowing at night inside the coffee plantation"
+              loading="lazy"
+              className="aspect-[4/5] w-full object-cover shadow-soft"
+            />
+            <img
+              src={plantationWalk.url}
+              alt="Guests walking through the coffee plantation at Raindrops Resorts"
+              loading="lazy"
+              className="aspect-square w-full object-cover shadow-soft"
+            />
+          </div>
           <img
             src={couple.url}
             alt="Guest relaxing on a cottage veranda at Raindrops Resorts"
             loading="lazy"
-            className="aspect-[3/4] w-full object-cover shadow-soft"
-          />
-          <img
-            src={pets.url}
-            alt="Pet-friendly resort near Sulthan Bathery – dogs by the pool"
-            loading="lazy"
-            className="mt-12 aspect-[3/4] w-full object-cover object-[70%_center] shadow-soft"
+            className="mt-12 aspect-[3/4] w-full object-cover shadow-soft"
           />
         </div>
       </div>
